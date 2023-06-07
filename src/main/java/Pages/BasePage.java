@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 // Default constructor
         }
         public BasePage(WebDriver driver) {
+
             this.driver = driver;
         }
         @BeforeClass
@@ -24,8 +25,9 @@ import org.testng.annotations.BeforeClass;
         @AfterMethod /*folosim @AfterMethod daca vrem sa
         inchidem browserul dupa fiecare test case in parte*/
         public void tearDown() {
-            driver.quit();
+
+           // driver.quit();
         }
     }
-    
+
 
