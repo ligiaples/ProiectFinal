@@ -11,13 +11,13 @@ import Pages.CheckboxDemo;
 public class CheckboxDemoTestCases extends BasePage {
     private CheckboxDemo checkboxDemo;
 
-    @BeforeClass
+    @BeforeMethod
 
     public void setUp() {
         super.setUp();
         checkboxDemo = new CheckboxDemo(driver);
     }
-    /*@Test
+    @Test
     public void SingleCheckbox() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxDemo.clickOnSingleCheck();
@@ -40,18 +40,22 @@ public class CheckboxDemoTestCases extends BasePage {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxDemo.clickOnThirdOption();
         Assert.assertTrue(checkboxDemo.isThirdOptionSelected());
-    }*/
+    }
     @Test
     public void TestFourthOptionFromMultipleCheckboxDemoIsSelected() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxDemo.clickOnFourthOption();
         Assert.assertTrue(checkboxDemo.isFourthOptionSelected());
     }
-    /*@Test
+    @Test
     public void AllOptionFromMultipleCheckboxDemoAreSelected() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxDemo.clickOnCheckAll();
-    }*/
+        WebElement button = driver.findElement(By.id("box"));
+        String buttonValue = button.getAttribute("value");
+        Assert.assertEquals(buttonValue, "uncheck all", "Button value does not match expected value");
+
+    }
 
 
 }

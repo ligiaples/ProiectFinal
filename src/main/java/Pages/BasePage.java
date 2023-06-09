@@ -22,12 +22,13 @@ import org.testng.annotations.BeforeClass;
             driver = new ChromeDriver();
             driver.get(baseUrl);
         }
-        @AfterMethod /*folosim @AfterMethod daca vrem sa
-        inchidem browserul dupa fiecare test case in parte*/
+        /*@AfterMethod /*folosim @AfterMethod daca vrem sa
+        inchidem browserul dupa fiecare test case in parte
         public void tearDown() {
 
-           // driver.quit();
-        }
+            driver.quit();
+        }*/
+
     }
 
 

@@ -82,6 +82,79 @@ public class RadioButtonDemoTestCases extends BasePage {
         Assert.assertTrue(radioButtonDemo.isSecondMaleSelected());
         Assert.assertTrue(radioButtonDemo.isFirstAgeSelected());
     }
+    @Test
+    public void SelectSecondMaleAndSecondAgeButton() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
+        radioButtonDemo.clickOnSecondMale();
+        radioButtonDemo.clickOnSecondAge();
+        radioButtonDemo.clickOnSecondGetValue();
+        Assert.assertTrue(radioButtonDemo.isSecondMaleSelected());
+        Assert.assertTrue(radioButtonDemo.isSecondAgeSelected());
+    }
+    @Test
+    public void SelectSecondMaleAndThirdAgeButton() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
+        radioButtonDemo.clickOnSecondMale();
+        radioButtonDemo.clickOnThirdAge();
+        radioButtonDemo.clickOnSecondGetValue();
+        Assert.assertTrue(radioButtonDemo.isSecondMaleSelected());
+        Assert.assertTrue(radioButtonDemo.isThirdAgeSelected());
+    }
+    @Test
+    public void SelectSecondFemaleAndFirstAgeButton() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
+        radioButtonDemo.clickOnSecondFemale();
+        radioButtonDemo.clickOnFirstAge();
+        radioButtonDemo.clickOnSecondGetValue();
+        Assert.assertTrue(radioButtonDemo.isSecondFemaleSelected());
+        Assert.assertTrue(radioButtonDemo.isFirstAgeSelected());
+    }
+    @Test
+    public void SelectSecondFemaleAndSecondAgeButton() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
+        radioButtonDemo.clickOnSecondFemale();
+        radioButtonDemo.clickOnSecondAge();
+        radioButtonDemo.clickOnSecondGetValue();
+        Assert.assertTrue(radioButtonDemo.isSecondFemaleSelected());
+        Assert.assertTrue(radioButtonDemo.isSecondAgeSelected());
+    }
+    @Test
+    public void SelectSecondFemaleAndThirdAgeButton() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
+        radioButtonDemo.clickOnSecondFemale();
+        radioButtonDemo.clickOnThirdAge();
+        radioButtonDemo.clickOnSecondGetValue();
+        Assert.assertTrue(radioButtonDemo.isSecondFemaleSelected());
+        Assert.assertTrue(radioButtonDemo.isThirdAgeSelected());
+    }
+    @Test
+    public void SelectOtherAndFirstAgeButton() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
+        radioButtonDemo.clickOnOther();
+        radioButtonDemo.clickOnFirstAge();
+        radioButtonDemo.clickOnSecondGetValue();
+        Assert.assertTrue(radioButtonDemo.isOtherSelected());
+        Assert.assertTrue(radioButtonDemo.isFirstAgeSelected());
+    }
+    @Test
+    public void SelectOtherAndSecondAgeButton() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
+        radioButtonDemo.clickOnOther();
+        radioButtonDemo.clickOnSecondAge();
+        radioButtonDemo.clickOnSecondGetValue();
+        Assert.assertTrue(radioButtonDemo.isOtherSelected());
+        Assert.assertTrue(radioButtonDemo.isSecondAgeSelected());
+    }
+    @Test
+    public void SelectOtherAndThirdAgeButton() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
+        radioButtonDemo.clickOnOther();
+        radioButtonDemo.clickOnThirdAge();
+        radioButtonDemo.clickOnSecondGetValue();
+        Assert.assertTrue(radioButtonDemo.isOtherSelected());
+        Assert.assertTrue(radioButtonDemo.isThirdAgeSelected());
+    }
+
 
 
     }

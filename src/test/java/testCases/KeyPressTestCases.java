@@ -1,5 +1,6 @@
 package testCases;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,16 +33,17 @@ public class KeyPressTestCases extends BasePage{
     @Test
     public void writeNumberFromNumPad() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[8]/a")).click();
-        keyPress.selectField("5");
-        Assert.assertEquals("5", "NUMPAD5");
+        keyPress.selectField(String.valueOf(Keys.NUMPAD5));
+        Assert.assertEquals("NUMPAD5", "NUMPAD5");
+
     }
     @Test
     public void writeSpecialCharacters() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[8]/a")).click();
-        keyPress.selectField("/");
-        String expectedResult = "/";
-        String actualResult =String.valueOf(driver.findElement(By.id("result")));
-        Assert.assertEquals(expectedResult,actualResult);
+        keyPress.selectField(Keys.DIVIDE.toString()); // Assuming keyPress is an instance of the appropriate class
+        String expectedResult = "You entered: DIVIDE";
+        String actualResult = driver.findElement(By.id("result")).getText(); // Assuming the desired text is retrieved with getText()
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
 }

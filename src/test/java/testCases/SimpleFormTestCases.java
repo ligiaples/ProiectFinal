@@ -124,14 +124,14 @@ public class SimpleFormTestCases extends BasePage {
             driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
             simpleFormPage.selectTwoInputFieldsEnterA("2");
             simpleFormPage.clickOnGetValuesButton();
-            Assert.assertTrue(driver.getPageSource().contains("NaN"));
+            Assert.assertTrue(driver.getPageSource().contains("Entered value is not a number"));
         }
         @Test
         public void enterPositiveNumberInBFieldThenClickOnGetValuesButton () throws InterruptedException {
             driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
             simpleFormPage.selectTwoInputFieldsEnterB("2");
             simpleFormPage.clickOnGetValuesButton();
-            Assert.assertTrue(driver.getPageSource().contains("NaN"));
+            Assert.assertTrue(driver.getPageSource().contains("Entered value is not a number"));
         }
 
 
