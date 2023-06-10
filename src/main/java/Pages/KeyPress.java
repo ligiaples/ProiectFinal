@@ -11,7 +11,7 @@ public class KeyPress extends BasePage{
     By Field = By.id("my_field");
     By Result = By.id("result");
 
-    // //Method to click on Key Press
+    // //Method to  Key Press
 
     public void selectField(String arg1) {
         driver.findElement(Field).sendKeys(arg1);
