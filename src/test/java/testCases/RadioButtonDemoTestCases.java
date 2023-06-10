@@ -18,63 +18,63 @@ public class RadioButtonDemoTestCases extends BasePage {
         radioButtonDemo = new RadioButtonDemo(driver);
     }
     @Test
-    public void SelectMaleButton() throws InterruptedException{
+    public void VerifyOfSelectMaleButton() throws InterruptedException{
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnFirstMale();
         radioButtonDemo.clickOnFirstGetValue();
         Assert.assertTrue(driver.getPageSource().contains("Radio button 'Male' is checked"));
     }
     @Test
-    public void SelectFemaleButton() throws InterruptedException {
+    public void VerifyOfSelectFemaleButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnFirstFemale();
         radioButtonDemo.clickOnFirstGetValue();
         Assert.assertTrue(driver.getPageSource().contains("Radio button 'Female' is checked"));
     }
     @Test
-    public void SelectSecondMaleButton() throws InterruptedException {
+    public void VerifyOfSelectSecondMaleButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnSecondMale();
         radioButtonDemo.clickOnSecondGetValue();
         Assert.assertTrue(driver.getPageSource().contains("Male"));
     }
     @Test
-    public void SelectSecondFemaleButton() throws InterruptedException {
+    public void VerifyOfSelectSecondFemaleButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnSecondFemale();
         radioButtonDemo.clickOnSecondGetValue();
         Assert.assertTrue(driver.getPageSource().contains("Female"));
     }
     @Test
-    public void SelectOtherButton() throws InterruptedException {
+    public void VerifyOfSelectOtherButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnOther();
         radioButtonDemo.clickOnSecondGetValue();
         Assert.assertTrue(driver.getPageSource().contains("Other"));
     }
     @Test
-    public void SelectFirstAgeButton() throws InterruptedException {
+    public void VerifyOfSelectFirstAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnFirstAge();
         radioButtonDemo.clickOnSecondGetValue();
         Assert.assertTrue(driver.getPageSource().contains("0-5"));
     }
     @Test
-    public void SelectSecondAgeButton() throws InterruptedException {
+    public void VerifyOfSelectSecondAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnSecondAge();
         radioButtonDemo.clickOnSecondGetValue();
         Assert.assertTrue(driver.getPageSource().contains("5 - 15"));
     }
     @Test
-    public void SelectThirdAgeButton() throws InterruptedException {
+    public void VerifyOfSelectThirdAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnThirdAge();
         radioButtonDemo.clickOnSecondGetValue();
         Assert.assertTrue(driver.getPageSource().contains("15 - 50"));
     }
     @Test
-    public void SelectSecondMaleAndFirstAgeButton() throws InterruptedException {
+    public void VerifyOfSelectSecondMaleAndFirstAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnSecondMale();
         radioButtonDemo.clickOnFirstAge();
@@ -83,7 +83,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         Assert.assertTrue(radioButtonDemo.isFirstAgeSelected());
     }
     @Test
-    public void SelectSecondMaleAndSecondAgeButton() throws InterruptedException {
+    public void VerifyOfSelectSecondMaleAndSecondAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnSecondMale();
         radioButtonDemo.clickOnSecondAge();
@@ -92,7 +92,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         Assert.assertTrue(radioButtonDemo.isSecondAgeSelected());
     }
     @Test
-    public void SelectSecondMaleAndThirdAgeButton() throws InterruptedException {
+    public void VerifyOfSelectSecondMaleAndThirdAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnSecondMale();
         radioButtonDemo.clickOnThirdAge();
@@ -101,7 +101,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         Assert.assertTrue(radioButtonDemo.isThirdAgeSelected());
     }
     @Test
-    public void SelectSecondFemaleAndFirstAgeButton() throws InterruptedException {
+    public void VerifyOfSelectSecondFemaleAndFirstAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnSecondFemale();
         radioButtonDemo.clickOnFirstAge();
@@ -110,7 +110,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         Assert.assertTrue(radioButtonDemo.isFirstAgeSelected());
     }
     @Test
-    public void SelectSecondFemaleAndSecondAgeButton() throws InterruptedException {
+    public void VerifyOfSelectSecondFemaleAndSecondAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnSecondFemale();
         radioButtonDemo.clickOnSecondAge();
@@ -119,7 +119,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         Assert.assertTrue(radioButtonDemo.isSecondAgeSelected());
     }
     @Test
-    public void SelectSecondFemaleAndThirdAgeButton() throws InterruptedException {
+    public void VerifyOfSelectSecondFemaleAndThirdAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnSecondFemale();
         radioButtonDemo.clickOnThirdAge();
@@ -128,7 +128,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         Assert.assertTrue(radioButtonDemo.isThirdAgeSelected());
     }
     @Test
-    public void SelectOtherAndFirstAgeButton() throws InterruptedException {
+    public void VerifyOfSelectOtherAndFirstAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnOther();
         radioButtonDemo.clickOnFirstAge();
@@ -137,7 +137,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         Assert.assertTrue(radioButtonDemo.isFirstAgeSelected());
     }
     @Test
-    public void SelectOtherAndSecondAgeButton() throws InterruptedException {
+    public void VerifyOfSelectOtherAndSecondAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnOther();
         radioButtonDemo.clickOnSecondAge();
@@ -146,7 +146,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         Assert.assertTrue(radioButtonDemo.isSecondAgeSelected());
     }
     @Test
-    public void SelectOtherAndThirdAgeButton() throws InterruptedException {
+    public void VerifyOfSelectOtherAndThirdAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnOther();
         radioButtonDemo.clickOnThirdAge();

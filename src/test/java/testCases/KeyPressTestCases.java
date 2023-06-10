@@ -20,26 +20,26 @@ public class KeyPressTestCases extends BasePage{
     }
     @Test
     public void writeLowercase() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[8]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div/div/ul/li[5]/a")).click();
         keyPress.selectField("t");
         Assert.assertEquals("t", "t");
     }
     @Test
     public void writeNumber() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[8]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div/div/ul/li[5]/a")).click();
         keyPress.selectField("6");
         Assert.assertEquals("6","6");
     }
     @Test
     public void writeNumberFromNumPad() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[8]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div/div/ul/li[5]/a")).click();
         keyPress.selectField(String.valueOf(Keys.NUMPAD5));
         Assert.assertEquals("NUMPAD5", "NUMPAD5");
 
     }
     @Test
     public void writeSpecialCharacters() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[8]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div/div/ul/li[5]/a")).click();
         keyPress.selectField(Keys.DIVIDE.toString()); // Assuming keyPress is an instance of the appropriate class
         String expectedResult = "You entered: DIVIDE";
         String actualResult = driver.findElement(By.id("result")).getText(); // Assuming the desired text is retrieved with getText()
