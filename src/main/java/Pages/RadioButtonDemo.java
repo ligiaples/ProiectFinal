@@ -55,6 +55,8 @@ public class RadioButtonDemo extends BasePage {
     public boolean isOtherSelected() {
         return true;
     }
+    public void assertRadioButtonSelection(boolean b, boolean b1, RadioButtonDemo radioButtonDemo) {
+    }
 }
 
 

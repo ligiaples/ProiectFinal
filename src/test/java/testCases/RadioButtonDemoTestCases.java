@@ -79,8 +79,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         radioButtonDemo.clickOnSecondMale();
         radioButtonDemo.clickOnFirstAge();
         radioButtonDemo.clickOnSecondGetValue();
-        Assert.assertTrue(radioButtonDemo.isSecondMaleSelected());
-        Assert.assertTrue(radioButtonDemo.isFirstAgeSelected());
+        radioButtonDemo.assertRadioButtonSelection(true,true,radioButtonDemo);
     }
     @Test
     public void VerifyOfSelectSecondMaleAndSecondAgeButton() throws InterruptedException {
@@ -88,8 +87,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         radioButtonDemo.clickOnSecondMale();
         radioButtonDemo.clickOnSecondAge();
         radioButtonDemo.clickOnSecondGetValue();
-        Assert.assertTrue(radioButtonDemo.isSecondMaleSelected());
-        Assert.assertTrue(radioButtonDemo.isSecondAgeSelected());
+        radioButtonDemo.assertRadioButtonSelection(true,true,radioButtonDemo);
     }
     @Test
     public void VerifyOfSelectSecondMaleAndThirdAgeButton() throws InterruptedException {
@@ -97,8 +95,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         radioButtonDemo.clickOnSecondMale();
         radioButtonDemo.clickOnThirdAge();
         radioButtonDemo.clickOnSecondGetValue();
-        Assert.assertTrue(radioButtonDemo.isSecondMaleSelected());
-        Assert.assertTrue(radioButtonDemo.isThirdAgeSelected());
+        radioButtonDemo.assertRadioButtonSelection(true,true,radioButtonDemo);
     }
     @Test
     public void VerifyOfSelectSecondFemaleAndFirstAgeButton() throws InterruptedException {
@@ -106,8 +103,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         radioButtonDemo.clickOnSecondFemale();
         radioButtonDemo.clickOnFirstAge();
         radioButtonDemo.clickOnSecondGetValue();
-        Assert.assertTrue(radioButtonDemo.isSecondFemaleSelected());
-        Assert.assertTrue(radioButtonDemo.isFirstAgeSelected());
+        radioButtonDemo.assertRadioButtonSelection(true,true,radioButtonDemo);
     }
     @Test
     public void VerifyOfSelectSecondFemaleAndSecondAgeButton() throws InterruptedException {
@@ -115,8 +111,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         radioButtonDemo.clickOnSecondFemale();
         radioButtonDemo.clickOnSecondAge();
         radioButtonDemo.clickOnSecondGetValue();
-        Assert.assertTrue(radioButtonDemo.isSecondFemaleSelected());
-        Assert.assertTrue(radioButtonDemo.isSecondAgeSelected());
+         radioButtonDemo.assertRadioButtonSelection(true,true,radioButtonDemo);
     }
     @Test
     public void VerifyOfSelectSecondFemaleAndThirdAgeButton() throws InterruptedException {
@@ -124,8 +119,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         radioButtonDemo.clickOnSecondFemale();
         radioButtonDemo.clickOnThirdAge();
         radioButtonDemo.clickOnSecondGetValue();
-        Assert.assertTrue(radioButtonDemo.isSecondFemaleSelected());
-        Assert.assertTrue(radioButtonDemo.isThirdAgeSelected());
+         radioButtonDemo.assertRadioButtonSelection(true,true,radioButtonDemo);
     }
     @Test
     public void VerifyOfSelectOtherAndFirstAgeButton() throws InterruptedException {
@@ -133,8 +127,7 @@ public class RadioButtonDemoTestCases extends BasePage {
         radioButtonDemo.clickOnOther();
         radioButtonDemo.clickOnFirstAge();
         radioButtonDemo.clickOnSecondGetValue();
-        Assert.assertTrue(radioButtonDemo.isOtherSelected());
-        Assert.assertTrue(radioButtonDemo.isFirstAgeSelected());
+        radioButtonDemo.assertRadioButtonSelection(true,true,radioButtonDemo);
     }
     @Test
     public void VerifyOfSelectOtherAndSecondAgeButton() throws InterruptedException {
@@ -142,17 +135,16 @@ public class RadioButtonDemoTestCases extends BasePage {
         radioButtonDemo.clickOnOther();
         radioButtonDemo.clickOnSecondAge();
         radioButtonDemo.clickOnSecondGetValue();
-        Assert.assertTrue(radioButtonDemo.isOtherSelected());
-        Assert.assertTrue(radioButtonDemo.isSecondAgeSelected());
+        radioButtonDemo.assertRadioButtonSelection(true,true,radioButtonDemo);
     }
+
     @Test
     public void VerifyOfSelectOtherAndThirdAgeButton() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[3]/a")).click();
         radioButtonDemo.clickOnOther();
         radioButtonDemo.clickOnThirdAge();
         radioButtonDemo.clickOnSecondGetValue();
-        Assert.assertTrue(radioButtonDemo.isOtherSelected());
-        Assert.assertTrue(radioButtonDemo.isThirdAgeSelected());
+        radioButtonDemo.assertRadioButtonSelection(true,true,radioButtonDemo);
     }
 
 
