@@ -53,7 +53,7 @@ public class CheckboxDemoTestCases extends BasePage {
         checkboxDemo.clickOnCheckAll();
         WebElement button = driver.findElement(By.id("box"));
         String buttonValue = button.getAttribute("value");
-        Assert.assertEquals(buttonValue, "uncheck all", "Button value does not match expected value");
+        Assert.assertEquals(buttonValue, "Uncheck All");
 
     }
 
